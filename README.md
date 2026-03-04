@@ -20,7 +20,7 @@ MySQL (Laragon recomendado en Windows)
 
 1) Clonar
 powershell
-git clone https://github.com/TU_USUARIO/TU_REPO.git
+git clone https://github.com/BrahianStiven/Ing_soft2
 cd TU_REPO
 2) Flask (puerto 8002, BD flask)
 2.1 Crear .env
