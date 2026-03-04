@@ -2,7 +2,7 @@
 # Secrets / env files (NO subir jamás)
 ########################################
 .env
-**/.env
+/.env
 .env.*
 !.env.example
 !.env.*.example
@@ -10,38 +10,38 @@
 ########################################
 # Python (Flask/Django)
 ########################################
-**/.venv/
-**/venv/
-**/__pycache__/
-**/*.pyc
-**/*.pyo
-**/*.pyd
-**/.pytest_cache/
-**/.mypy_cache/
-**/.ruff_cache/
+/.venv/
+/venv/
+/__pycache__/
+/*.pyc
+/*.pyo
+/*.pyd
+/.pytest_cache/
+/.mypy_cache/
+/.ruff_cache/
 
 ########################################
 # Node (Express)
 ########################################
-**/node_modules/
-**/npm-debug.log*
-**/yarn-error.log*
-**/pnpm-debug.log*
+/node_modules/
+/npm-debug.log*
+/yarn-error.log*
+/pnpm-debug.log*
 
 ########################################
 # Laravel / PHP (Composer)
 ########################################
-**/vendor/
-**/.phpunit.result.cache
-**/storage/*.key
-**/public/hot
-**/public/storage
-**/public/build
+/vendor/
+/.phpunit.result.cache
+/storage/*.key
+/public/hot
+/public/storage
+/public/build
 
 ########################################
 # OS / IDE
 ########################################
 .DS_Store
 Thumbs.db
-**/.vscode/
-**/.idea/
+/.vscode/
+/.idea/
