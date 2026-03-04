@@ -1,13 +1,11 @@
-const admin=require('firebase-admin');
-const svrcAcc=require('./serviceAccountKey.json');
-
-admin.initializeApp({
-    credential:admin.credential.cert(svrcAcc),
-    databaseURL:"https://clase-77746-default-rtdb.firebaseio.com/"
-});
-
-const db=admin.database();
-
-module.exports=db;
-
-
+// firebase.js - MODO PRUEBA (sin credenciales reales)
+module.exports = {
+  ref: function(path) {
+    return {
+      push: function() { return { set: function(data) { return Promise.resolve(); } }; },
+      once: function() { return Promise.resolve({ val: function() { return {}; } }); },
+      update: function(data) { return Promise.resolve(); },
+      remove: function() { return Promise.resolve(); }
+    };
+  }
+};
