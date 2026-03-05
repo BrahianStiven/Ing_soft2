@@ -7,6 +7,6 @@ router.register(r'productos', views.ProductoViewSet)
 
 urlpatterns=[
     path('', include(router.urls)), #agregar esta linea para incluir las urls del router
-
+     path('health/', views.health),  # Health check del microservicio
 ]
 
