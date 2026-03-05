@@ -31,4 +31,14 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'django' => [
+        'base_url' => env('DJANGO_BASE_URL', 'http://127.0.0.1:8001'),
+    ],
+    'flask' => [
+        'base_url' => env('FLASK_BASE_URL', 'http://127.0.0.1:8002'),
+    ],
+    'express' => [
+        'base_url' => env('EXPRESS_BASE_URL', 'http://127.0.0.1:3000'),
+    ],
+
 ];
