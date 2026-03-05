@@ -9,19 +9,23 @@ class DjangoController extends Controller
 {
     public function traer_productos()
     {
-        $baseUrl = config('services.django.base_url'); // DJANGO_BASE_URL: http://127.0.0.1:8001 
+        $baseUrl = config('services.django.base_url');
+
+        $token = 'miclave123';
 
         $response = Http::baseUrl($baseUrl)
+            ->withHeaders(['Authorization' => "Token $token"])
             ->get('/api/productos/')
             ->json();
 
         return response()->json($response);
     }
 
-
     public function guardar_producto(Request $request)
     {
         $baseUrl = config('services.django.base_url');
+
+        $token = 'miclave123';
 
         $payload = [
             'nombre' => $request->nombre,
@@ -30,6 +34,7 @@ class DjangoController extends Controller
         ];
 
         $response = Http::baseUrl($baseUrl)
+            ->withHeaders(['Authorization' => "Token $token"])
             ->post('/api/productos/', $payload)
             ->json();
 
