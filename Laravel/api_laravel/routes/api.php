@@ -29,6 +29,10 @@ Route::post('/recuperar', [UserController::class, 'recuperarPassword']);
 Route::get('/productos', [DjangoController::class, 'traer_productos']);
 Route::post('/productos', [DjangoController::class, 'guardar_producto']);
 
+/********** Rutas para el controlador de Flask ***********/
+Route::get('/flask/users', [FlaskController::class, 'traer_users']);
+Route::post('flask/users', [FlaskController::class, 'guardar_user']);
+
 Route::get("/ingredients", [IngredientController::class, "index"]);
 Route::post("/ingredients", [IngredientController::class, "store"]);
 Route::put("/ingredients/{id}", [IngredientController::class, "update"]);
