@@ -33,6 +33,13 @@ Route::post('/productos', [DjangoController::class, 'guardar_producto']);
 Route::get('/flask/users', [FlaskController::class, 'traer_users']);
 Route::post('flask/users', [FlaskController::class, 'guardar_user']);
 
+/********** Rutas para el controlador de Express ***********/
+Route::get('/express/users', [ExpressController::class, 'index']);
+Route::post('/express/users', [ExpressController::class, 'store']);
+Route::get('/express/users/{id}', [ExpressController::class, 'show']);
+Route::put('/express/users/{id}', [ExpressController::class, 'update']);
+Route::delete('/express/users/{id}', [ExpressController::class, 'destroy']);
+
 Route::get("/ingredients", [IngredientController::class, "index"]);
 Route::post("/ingredients", [IngredientController::class, "store"]);
 Route::put("/ingredients/{id}", [IngredientController::class, "update"]);
